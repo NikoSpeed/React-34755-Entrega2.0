@@ -4,6 +4,7 @@ import Form from '../layouts/Form'
 import Secciones from '../layouts/Secciones';
 
 const Navbar = () => {
+  const listaDrop = ["Amuletos", "Vasijas", "Mascaras", "Miscelaneo"]
     return (
         <>
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -12,7 +13,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarColor01">
       <ul className="navbar-nav me-auto">
         <Secciones/>
-        <Dropdown/>
+        <Dropdown lista = {listaDrop}/>
       </ul>
         <Form busqueda="Busqueda Producto"/>
     </div>

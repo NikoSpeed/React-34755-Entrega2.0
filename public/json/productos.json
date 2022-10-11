@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "idCategoria": 1,
         "nombre": "Amuletos",
         "precio": 6000,
         "stock": 20,
@@ -8,6 +9,7 @@
     },
     {
         "id": 2,
+        "idCategoria": 1,
         "nombre": "Vasijas",
         "precio": 3500,
         "stock": 6,
@@ -15,6 +17,7 @@
     },
     {
         "id": 3,
+        "idCategoria": 1,
         "nombre": "Mascaras",
         "precio": 5700,
         "stock": 12,
@@ -22,6 +25,7 @@
     },
     {
         "id": 4,
+        "idCategoria": 2,
         "nombre": "Grubs",
         "precio": 8000,
         "stock": 46,
