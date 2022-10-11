@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Amuletos",
+        "precio": 6000,
+        "stock": 20,
+        "img": "amuleto.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vasijas",
+        "precio": 3500,
+        "stock": 6,
+        "img": "vasija.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Mascaras",
+        "precio": 5700,
+        "stock": 12,
+        "img": "mascara.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Grubs",
+        "precio": 8000,
+        "stock": 46,
+        "img": "grubs.jpg"
+    }
+]
