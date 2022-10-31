@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { consultarBDD } from '../../utilidades/funcionesUtiles';
+import { DarkModeContext } from '../../context/darkModeContext';
 import {Link} from 'react-router-dom';
 const Home = () => {
     const [productos, setProductos] = useState([]);
+
+    const {darkMode} = useContext(DarkModeContext);
     useEffect(() => {
         consultarBDD('./json/productos.json').then(productos => { 
             console.log(productos)

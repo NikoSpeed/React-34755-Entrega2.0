@@ -1,6 +1,23 @@
 import React from 'react';
+import { useState, useContext } from 'react';
+import { CarritoContext } from '../../context/CarritoContext';
 
 const DetalleProducto = ({producto}) => {
+  const [cantidad, setcantidad] = useState(1);
+
+  const {carrito, agregarProducto, vaciarCarrito} = useContext(CarritoContext);
+
+    const cantProducto = (operacion) =>{
+        if(operacion == "+"){
+          if(cantidad < producto.stock){
+            setcantidad(cantidad + 1)
+          } 
+        } else {
+            if(cantidad > 1){
+              setcantidad(cantidad - 1)
+            }
+        }
+    }
     return (
         <>
   <div className="row g-0">
@@ -10,9 +27,13 @@ const DetalleProducto = ({producto}) => {
     <div className="col-md-8">
       <div className="card-body">
         <h5 className="card-title">{producto.nombre}</h5>
-        <p className="card-text">{producto.precio}</p>
-        <p className="card-text">{producto.stock}</p>
-        <button className='btn btn-dark'>Comprar</button>
+        <p className="card-text">{"Precio: " + producto.precio}</p>
+        <p className="card-text">{"Stock: " + producto.stock}</p>
+        <p className="card-text">{"Cantidad: " + cantidad}</p>
+        <button className='btn btn-light' onClick={ () => cantProducto("+")}>+</button>
+        <button className='btn btn-light' onClick={ () => cantProducto("-")}>-</button>
+
+        <button className='btn btn-dark' onClick={ () => agregarProducto(producto, cantidad)}>Agregar al carrito</button>
       </div>
     </div>
   </div>
